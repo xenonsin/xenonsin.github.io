@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+		<!--Import custom styles-->
+		<link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<!-- Favicon -->
+		<link rel="icon" href="../images/logo.png">		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>		
+		<title>Light's Out</title>
+		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 960, 
+				height: 600,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+				
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "lightsout.unity3d");
+			});
+		-->
+		</script>
+		<style type="text/css">
+		<!--
+		div.content {
+			margin: auto;
+			width: 960px;
+		}
+		div.broken,
+		div.missing {
+			margin: auto;
+			position: relative;
+			top: 50%;
+			width: 193px;
+		}
+		div.broken a,
+		div.missing a {
+			height: 63px;
+			position: relative;
+			top: -31px;
+		}
+		div.broken img,
+		div.missing img {
+			border-width: 0px;
+		}
+		div.broken {
+			display: none;
+		}
+		div#unityPlayer {
+			cursor: default;
+			height: 600px;
+			width: 960px;
+		}
+		-->
+		</style>
+		
+	</head>
+	<body>
+	
+		<div class="container portfolio">
+			<h5>&nbsp;</h5>        
+			<h5>Lights Out</h5>	
+            <div class="row center border">		
+				<i>Teammates: Chet Manjunath, Daniel Ramirez, Gemma Busoni, Jeffrey Wong, Justin Liwag</i>
+            </div>			
+		</div>
+	
+		<!-- Web Player -->
+		<div class="content">
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+				<div class="broken">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Pictures -->
+		<div class="container portfolio">        
+			<div class="row">
+			  <div class="col s12 m12 l12 portfolio-holder">
+				<img class="materialboxed" src="../images/projects/lightsout/1.jpg" data-caption="">
+				<img class="materialboxed" src="../images/projects/lightsout/2.jpg" data-caption="">
+				<img class="materialboxed" src="../images/projects/lightsout/3.jpg" data-caption="">
+				<img class="materialboxed" src="../images/projects/lightsout/4.jpg" data-caption="">
+				<img class="materialboxed" src="../images/projects/lightsout/5.jpg" data-caption="">
+			  </div>
+			</div>
+      </div>
+		
+		<!-- About -->
+	     <div class="container row black-text center">
+            <h5>About the project</h5>
+            <p class="flow-text left-align">
+            
+				On January 21, 2014 I participated in CodeDay LA. It was my first “hackathon”/game jam type event so I really didn’t know what to expect. I pitched an idea for a 2D puzzle platformer game with the intention of inviting anyone interested in learning how to make games using unity or learn how to code using c#. I met some really wonderful people and had a blast!
+
+				There are some bugs here and there and I forgot to implement a reset button, but we did the best we could during the 24 hours given to us.
+				<br><br>
+				Our team managed to win top overall so I’d say it was a great first experience for all of us. 
+            </p>
+            <h5>Gameplay</h5>
+            <div class="video-container">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/J3NrZI8SAcs" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>	
+
+	
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+	
+	</body>
+</html>

@@ -126,60 +126,47 @@
             <h5>About the project</h5>
             <p class="flow-text left-align">
             
-				On January 21, 2014 I participated in CodeDay LA. It was my first “hackathon”/game jam type event so I really didn’t know what to expect. I pitched an idea for a 2D puzzle platformer game with the intention of inviting anyone interested in learning how to make games using unity or learn how to code using c#. I met some really wonderful people and had a blast!
-
-				There are some bugs here and there and I forgot to implement a reset button, but we did the best we could during the 24 hours given to us.
+				On January 21, 2014 I participated in CodeDay LA. It was my first hackathon/game jam type event so I really didn’t know what to expect. 
+				I pitched an idea for a 2D puzzle platformer game with the intention of inviting anyone interested in learning how to make games using unity or learn how to code using c#.
+				Justin came up with the idea of transitioning between worlds, and to achieve this I used unity's tagging system to tag the level assets as either "black" or "white" to disable/enable them whenever the user 
+				"turns the light off". We designed the early levels to slowly ease, and introduce the player to the game's mechanics. First showing him the concept of being able to turn off the light, next showing the player
+				that certain objects exist in only one world, then showing that some boxes can be moved around in order to reach different areas. 
 				<br><br>
-				Our team managed to win top overall so I’d say it was a great first experience for all of us. 
+				Our team managed to win top overall so I'd say it was a great first experience for all of us. 
+				<br><br>
+				The game was made using <b>Unity</b> and written in <b>C#</b>. Transitioning between worlds concept designed by Justin. Main menu screen was created by Daniel and Gemma. All art assets were made by Chet using <b>Photoshop</b>.
+	
             </p>
         
         </div>
 
 		<div class="container divider"></div>	
-		
+		<!--Pictures ... w: 960 h: 720-->
 		<div class="">
             <h5>&nbsp;</h5>
 		<div class="container row">
-			<div class="col s4">
-				<img class="materialboxed z-depth-2 picture"  data-caption="Our Top Overall Trophy" src="../images/projects/lightsout/1.jpg"><br>
+			<div class="col s12 m6 l4">
+				<img class="materialboxed z-depth-2 responsive-img"  data-caption="Our Top Overall Trophy" src="../images/projects/lightsout/1.jpg"><br>
 			</div>
-			<div class="col s4">
-				<img class="materialboxed z-depth-2 picture" data-caption="Working hard?" src="../images/projects/lightsout/2.jpg"><br>
+			<div class="col s12 m6 l4">
+				<img class="materialboxed z-depth-2 responsive-img" data-caption="Working hard?" src="../images/projects/lightsout/2.jpg"><br>
 			</div>
-			<div class="col s4">
-			   <img class="materialboxed z-depth-2 picture" data-caption="Demoing in front of the judges." src="../images/projects/lightsout/3.jpg"><br>
+			<div class="col s12 m6 l4">
+			   <img class="materialboxed z-depth-2 responsive-img" data-caption="Demoing in front of the judges." src="../images/projects/lightsout/3.jpg"><br>
 			</div>
-			<div class="col s4">
-			   <img class="materialboxed z-depth-2 picture" data-caption="Winning our prize." src="../images/projects/lightsout/4.jpg"><br>
+			<div class="col s12 m6 l4">
+			   <img class="materialboxed z-depth-2 responsive-img" data-caption="Winning our prize." src="../images/projects/lightsout/4.jpg"><br>
 			</div>
-			<div class="col s4">
-			   <img class="materialboxed z-depth-2 picture" data-caption="Getting up for dinner." src="../images/projects/lightsout/5.jpg"><br>
-			</div>
-			<div class="col s4">
-			   <img class="materialboxed z-depth-2 picture" data-caption="Getting up for dinner." src="../images/projects/lightsout/5.jpg"><br>
+			<div class="col s12 m6 l4">
+			   <img class="materialboxed z-depth-2 responsive-img" data-caption="Getting up for dinner." src="../images/projects/lightsout/5.jpg"><br>
 			</div>
 		</div>
         </div>
 		
 		<div class="container divider"></div>
 		
-		<!-- Pictures
-		<div class="container portfolio about">        
-			<div class="row">
-			  <div class="col s12 m12 l12 portfolio-holder">
-				<img class="materialboxed" width="250" src="../images/projects/lightsout/1.jpg" data-caption="">
-				<img class="materialboxed" width="250" src="../images/projects/lightsout/2.jpg" data-caption="">
-				<img class="materialboxed" width="250" src="../images/projects/lightsout/3.jpg" data-caption="">
-				<img class="materialboxed" width="250" src="../images/projects/lightsout/4.jpg" data-caption="">
-				<img class="materialboxed" width="250" src="../images/projects/lightsout/5.jpg" data-caption="">
-			  </div>
-			</div>
-		</div> -->
-		
-
-		
 		<!-- Web Player -->
-		<div class="container content desktop-only">
+		<div class="container content hide-on-med-and-down">
 		<h5>&nbsp;</h5>
 			<div id="unityPlayer">
 				<div class="missing">
@@ -219,6 +206,7 @@
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="../js/materialize.min.js"></script>
+		<script type="text/javascript" src="../js/init.js"></script>
 	
 	</body>
 </html>

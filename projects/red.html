@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+		<!--Import custom styles-->
+		<link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<!-- Favicon -->
+		<link rel="icon" href="../images/logo.png">		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>		
+		<title>Red</title>
+		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 960, 
+				height: 600,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+				
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "red.unity3d");
+			});
+		-->
+		</script>
+		<style type="text/css">
+		<!--
+		div.content {
+			margin: auto;
+			width: 960px;
+		}
+		div.broken,
+		div.missing {
+			margin: auto;
+			position: relative;
+			top: 50%;
+			width: 193px;
+		}
+		div.broken a,
+		div.missing a {
+			height: 63px;
+			position: relative;
+			top: -31px;
+		}
+		div.broken img,
+		div.missing img {
+			border-width: 0px;
+		}
+		div.broken {
+			display: none;
+		}
+		div#unityPlayer {
+			cursor: default;
+			height: 600px;
+			width: 960px;
+		}
+		-->
+		</style>
+		
+	</head>
+	<body>
+	
+		<div class="container portfolio">
+			<a href="/" class="waves-effect waves-light btn-flat"><i class="mdi-action-home"></i></a>       
+			<h5>Red</h5>	
+            <div class="row center border">		
+            </div>			
+		</div>
+		
+		<!-- Video Player -->
+		<div class="container row black-text center about">
+            <div class="video-container">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/SNc1gL2yS7w" frameborder="0" allowfullscreen></iframe>
+            </div>
+		</div>
+		
+		<div class="container divider"></div>
+		
+		<!-- About -->
+	     <div class="container row black-text about flow-text left-align">
+            <h5 class="center">About the project</h5>          
+			<p>From May 15th to 25th 2014, I participated in the Public Domain Jam, where we had to make a game based on content found in the public domain.</p>	
+			<p>Red is an Action RPG / Grandma Defence where you play as little red riding hood trying to protect her grandma and herself through waves of wolves.</p>
+			<p>In terms of combat, I drew inspiration from games such as Bastion, where the keyboard is used to move while the mouse is used for aiming and fighting. 
+			I'm not a big fan of the mouse-centric bundling of both movement and combat found in games such as Diablo. I wanted to design a game where combat felt responsive and engaging, and I feel like separating 
+			movement and combat to the mouse and keyboard achieves that.</p>
+			<p>With design and aesthetic, I'm a big fan of Ragnarok Online and it's 2.5D style with 2D sprites in a 3D environtment. I created sprite sheets for both the player and the wolves, while making the 3D trees in blender.
+			I made this effect more apparent by allowing the player to rotate the camera, while updating the sprites to "face" the same direction.</p>
+			<p>Here's what I was able to accomplish:</p>
+			<ul>
+			<li>&#8226; Implemented a 3D aware sprite system, which automatically updates the sprites depending on the direction the object is facing in 3D space and where the camera is oriented.</li>
+			<li>&#8226; Implemented A* Pathfinding and an appropriate enemy AI for the wolves to move through the level and decide when and who to attack.</li>
+			<li>&#8226; Created GUI which updates depending on change in hp events being sent out by the player and grandma.</li>
+			<li>&#8226; Used object pooling to store the wolves to avoid slow down when instantiating at the start of each wave.</li>
+			<li>&#8226; Created all the art assets myself.</li>
+			<li>&#8226; Used an online virtual cello to create the background music. </li>
+			</ul>
+			<p>This was the first time I really was working alone, and I learned a lot about the different workflows artist need to take when developing art assets for games.</p>
+			
+			<p class="center"><a class=" waves-effect waves-light btn-flat" href="http://itch.io/jam/the-public-domain-jam/rate/7974">itch.io jam page</a></p>
+			The game was made using <b>Unity</b> and written in <b>C#</b>. 2D art assets were created using <b>CLIP STUDIO PAINT</b>, while 3D assets were created using <b>Blender</b>. Sounds were edited using <b>Audacity</b> and recorded from <a href="http://dagobah.net/flash/Virtual_Cello.swf">here</a>.
+	
+        </div>
+
+		<div class="container divider"></div>	
+		<!--Pictures ... w: 960 h: 720-->
+		<div class="">
+            <h5>&nbsp;</h5>
+			<div class="container row">
+				<div class="col s12 m6 l4">
+					<img class="materialboxed z-depth-2 responsive-img"  data-caption="Our Top Overall Trophy" src="../images/projects/red/1.jpg"><br>
+				</div>
+				<div class="col s12 m6 l4">
+					<img class="materialboxed z-depth-2 responsive-img" data-caption="Working hard?" src="../images/projects/red/2.jpg"><br>
+				</div>
+				<div class="col s12 m6 l4">
+				   <img class="materialboxed z-depth-2 responsive-img" data-caption="Demoing in front of the judges." src="../images/projects/red/3.jpg"><br>
+				</div>
+			</div>
+        </div>
+		
+		<div class="container divider"></div>
+		
+		<!-- Web Player -->
+		<div class="container content hide-on-med-and-down">
+		<h5>&nbsp;</h5>
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+				<div class="broken">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+			Controls:
+			<br>
+			WASD - Move
+			<br>
+			Mouse1 or K - Attack
+			<br>
+			Space - Dash
+			<br>
+			Shift + Mouse2 - Rotate Camera
+			<br>
+			Scroll - Zoom In/Out
+		</div>
+		
+		<div class="container divider"></div>
+		
+		<footer class="page-footer white">
+          <div class="container center">
+            <div class="row">
+              <div class="col s12">
+                <h5>Contact</h5>
+              </div>
+              <div class="row">
+                <a class="col s12 m6 black-text" href="./resume.pdf"><i class="mdi-action-description"></i> R&#233;sum&#233;</a>
+                <a class="col s12 m6 black-text" href="https://github.com/xenonsin"><i class="mdi-hardware-keyboard"></i> github.com/xenonsin</a>
+                <a class="col s12 m6 black-text" href="mailto:keno.sanpablo@gmail.com"><i class="mdi-communication-email"></i> keno.sanpablo@gmail.com</a>
+                <a class="col s12 m6 black-text" href="http://challengepost.com/KenoSP"><i class="mdi-social-person"></i> challengepost.com/KenoSP</a> 
+				&#9400; 2015 Keno Iwa San Pablo
+              </div>
+            </div>
+          </div>
+           
+        </footer>
+
+	
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../js/materialize.min.js"></script>
+		<script type="text/javascript" src="../js/init.js"></script>
+	
+	</body>
+</html>

@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | ProjectSaipan</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <title>ProjectSaipan</title>
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+	<!--Import custom styles-->
+	<link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!--<link rel="shortcut icon" href="TemplateData/favicon.ico">-->
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
@@ -13,13 +17,23 @@
     </script>
   </head>
   <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 540px; height: 960px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">ProjectSaipan</div>
-      </div>
+  	<div class="container row">
+  		<div class="col s5">
+      		<p>A tactical, deckbuilding RPG inspired by Magic: The Gathering, Pathfinder Adventures, and Fire Emblem. Assemble your party and build your deck as you explore randomly generated levels and encounters!</p>
+	      	<p>Your feedback is important to me, please fill out this quick survey after playing the game :D </p>
+      		<p><a href="https://goo.gl/forms/kLuvG1nAMBMPcELE2">https://goo.gl/forms/kLuvG1nAMBMPcELE2</a></p>
+      	</div>
+      	<div class="col s7">
+	    	<div class="webgl-content">
+		      	<div id="gameContainer" style="width: 540px; height: 960px"></div>
+		      	<div class="footer">
+		        <div class="webgl-logo"></div>
+		        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+	      	</div>
+	     </div>
+    </div>
+
+
     </div>
   </body>
 </html>

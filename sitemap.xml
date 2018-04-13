@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ksanpablo.me/about/</loc>
+    <lastmod>2018-04-12T23:21:05-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ksanpablo.me/work/</loc>
+    <lastmod>2018-04-12T22:59:23-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ksanpablo.me/blog/</loc>
+    <lastmod>2018-04-12T22:59:17-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ksanpablo.me/</loc>
     <priority>0</priority>
   </url>

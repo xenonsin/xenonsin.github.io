@@ -6,10 +6,20 @@
     <description>Recent content on Keno San Pablo</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; 2018 Keno San Pablo</copyright>
-    <lastBuildDate>Thu, 28 Apr 2016 23:29:12 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 13 Apr 2018 00:19:44 -0700</lastBuildDate>
     
 	<atom:link href="http://ksanpablo.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pillars of Eternity II : Deadfire</title>
+      <link>http://ksanpablo.me/work/pillars2/</link>
+      <pubDate>Fri, 13 Apr 2018 00:19:44 -0700</pubDate>
+      
+      <guid>http://ksanpablo.me/work/pillars2/</guid>
+      <description>Pursue a rogue god over land and sea in the sequel to the multi-award-winning RPG Pillars of Eternity. Captain your ship on a dangerous voyage of discovery across the vast unexplored archipelago region of the Deadfire.
+Steam PC and Mac</description>
+    </item>
     
     <item>
       <title>Pathfinder Adventures</title>
@@ -20,7 +30,10 @@
       <description>Pathfinder Adventures translates the best-selling Pathfinder Adventure Card Game into an entirely new breed of digital card game, where players adventure collaboratively to battle monsters and villains, and acquire new feats, items, weapons, and allies.
 Google Play
 Itunes
-Steam PC and Mac</description>
+Steam PC and Mac
+Description of Work Integrating the game&amp;rsquo;s online precence.
+Playfab
+In game purchases</description>
     </item>
     
   </channel>
